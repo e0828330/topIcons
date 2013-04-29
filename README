@@ -1,0 +1,4 @@
+1. Copy topIcons@anarsoul.blogspot.com directory into ~/.local/share/gnome-shell/extensions:
+   $ cp -r topIcons@anarsoul.blogspot.com ~/.local/share/gnome-shell/extensions
+2. Restart gnome-shell: Alt+F2, r, Enter
+3. Launch gnome-tweak-tool and enable topIcons extension
