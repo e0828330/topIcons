@@ -63,6 +63,9 @@ function onTrayIconAdded(o, icon) {
     if (NotificationDaemon.STANDARD_TRAY_ICON_IMPLEMENTATIONS[wmClass] !== undefined)
         return;
 
+    icon.height = Panel.PANEL_ICON_SIZE;
+    icon.width = Panel.PANEL_ICON_SIZE;
+
     let trayIndicator = new TrayIndicator(icon)
 
     icon.reactive = true;
@@ -76,8 +79,7 @@ function onTrayIconAdded(o, icon) {
         oldIndicator.destroy();
     }
     icons[wmClass] = trayIndicator;
-    Main.panel.addToStatusArea('tray-' + wmClass, trayIndicator)
-
+    Main.panel.addToStatusArea('tray-' + wmClass, trayIndicator);
 }
 
 function onTrayIconRemoved(o, icon) {
